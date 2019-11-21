@@ -4,10 +4,10 @@ class GameRoundsController < ApplicationController
   end
 
   def create
-    round = GameRound.new(round_params)
-    round.save
+    @round = GameRound.new(round_params)
+    @round.save
 
-    render json: round
+    render json: @round
   end
 
   private 

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  resources :game_rounds
-  resources :games
-  resources :users
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :game_rounds, only: [:index, :create]
+  resources :games, only: [:index, :create]
+  resources :users, only: [:index, :create, :update]
 end
