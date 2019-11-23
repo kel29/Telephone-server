@@ -42,3 +42,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Active Storage S3
 gem "aws-sdk-s3", require: false
+
+gem 'active_model_serializers'
