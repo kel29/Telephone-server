@@ -1,5 +1,5 @@
-User.create(name: 'Krista', email: 'k@k.com')
-User.create(name: 'Bog', email: 'b@b.com')
+User.create(name: 'krista', email: 'k@k.com')
+User.create(name: 'bog', email: 'b@b.com')
 Game.create(user_id: 1)
 Game.create(user_id: 2)
 GameRound.create(game_id: 1, contributor: 'kel', sentence: 'A human is doing yoga')
