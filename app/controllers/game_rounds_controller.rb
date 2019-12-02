@@ -4,11 +4,10 @@ class GameRoundsController < ApplicationController
   end
 
   def create
-    # TODO: figure out how to use strong params with the post rather than permit!
-    params.permit!
-    params[:game_round].each { |round| GameRound.create(round) }
+    round = GameRound.new(round_params)
+    round.save
 
-    render json: GameRound.all
+    render json: round
   end
 
   private
