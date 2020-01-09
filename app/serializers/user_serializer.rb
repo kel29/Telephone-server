@@ -6,7 +6,7 @@ class UserSerializer < ActiveModel::Serializer
       {
         game_id: game.id,
         created_at: game.created_at,
-        game_rounds: game_rounds(game)
+        game_rounds: game_rounds(game).sort_by { |rounds| rounds[:created_at] }
       }
     end
   end
