@@ -1,24 +1,7 @@
-# README
+# Welcome to Telephone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This React Native application takes the childhood classic game of micommunication and adds a sketching twist. Players alternate between sketching and describing the previous sketch, creating an unexpected and humorous story along the way.
 
-Things you may want to cover:
+## Technology Used
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The application is developed with a Ruby on Rails backend, S3 image hosting, and a React Native with Expo [frontend](https://github.com/kel29/frontend-telephone). User authentication is integrated with Facebook login. Touch drawing is implemented with Expo-Pixi and user interface is enhanced with Native Base.
