@@ -11,7 +11,7 @@ class GameRoundsController < ApplicationController
       file_name = File.basename(params[:drawing].tempfile)
       s3_uploader(params[:game_id], file_name, params[:drawing].tempfile)
 
-      round.drawing = "#{params[:game_id]}/#{file_name}"
+      round.drawing = "https://server-telephone.s3-us-west-2.amazonaws.com/#{params[:game_id]}/#{file_name}"
     else
       round.sentence = params[:sentence]
     end
