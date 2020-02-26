@@ -23,7 +23,11 @@ class GameRoundsController < ApplicationController
   private
 
   def s3_uploader(prefix, file_name, file_path)
-    s3 = Aws::S3::Resource.new(region: 'us-west-2')
+    s3 = Aws::S3::Resource.new(
+      accessKeyId: ENV['S3_KEY'],
+      secretAccessKey: ENV['S3_SECRET'],
+      region: 'us-west-2'
+    )
     target_obj = s3.bucket('server-telephone').object("#{prefix}/#{file_name}")
     target_obj.upload_file(file_path)
   end
